@@ -1,0 +1,22 @@
+[
+    {
+        "title": "What is the point?",
+        "description": "What is the point of all of this?!",
+        "user_id": 1
+    },
+    {
+        "title": "This is the end!",
+        "description": "I want to finish this coding camp!!", 
+        "user_id": 1
+    },
+    {
+        "title": "I need to shower!",
+        "description": "I have not showered in days!!!", 
+        "user_id": 1
+    },
+    {
+        "title": "OMG!",
+        "description": "This video game is crazy!!", 
+        "user_id": 1
+    }
+]

@@ -1,0 +1,37 @@
+<div class="card border-info mb-3">
+    <div class="card-header">
+        <h2 class="card-title" data-id="{{id}}">{{title}}</h2>
+        <p class="card-text">This Was Posted by: {{user.username}} on {{format_date date_created}}</p>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{description}}</p>
+    </div>
+</div>
+
+{{#each comments as |comment| }}
+<div class="card border-info mb-3">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{comment.description}}</p>
+        <p class="card-text">- {{comment.user.username}} on {{format_date comment.date_created}}</p>
+    </div>
+</div>
+{{/each}}
+
+{{#if logged_in}}
+<div>
+    <h3>You Can Leave a Comment Here!</h3>
+    <form class="comment-form">
+        <div>
+            <label for="description" class="form-label">What is it that you would like to ask/say?</label>
+            <input type="text" name="description" id="comment-description" class="form-control">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-outline-dark">Leave a Comment here:</button>
+        </div>
+    </form>
+</div>
+
+<script src="/js/comment.js"></script>
+{{/if}}

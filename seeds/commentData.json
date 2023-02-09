@@ -1,0 +1,12 @@
+[
+    {
+       "description": "This is not cool man. I don't agree!",
+       "user_id": 2,
+       "post_id": 1
+    },
+    {
+        "description": "Bro....",
+        "user_id": 2,
+        "post_id": 2
+     }
+]

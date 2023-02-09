@@ -1,0 +1,43 @@
+<div>
+    <div>
+        <h2>Hello {{username}}!</h2>
+    </div>
+    
+    {{#if posts.length}}
+    <h2 class="pastPosts">This Is Your Previous Posts:</h2>
+        <div class="postWrapper">
+            {{#each posts as |post|}}
+            <div class="card border-info mb-3">
+                <div class="card-header">
+                    <h2 class="card-title"><a href="/api/post/{{post.id}}" class="text-reset text-decoration-none">{{post.title}}</a></h2>
+                    <p>This Was Posted by: {{post.user.username}} on {{format_date post.date_created}}</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{post.description}}</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-outline-dark deleteBtn" data-id="{{post.id}}">Press To Delete Post</button>
+            </div>
+            {{/each}}
+        </div>
+    {{/if}}
+    <div>
+        <h3>Create a New Post Here:</h3>
+        <form class="newPost-form">
+            <div>
+                <label for="title" class="form-label">Title: </label>
+                <input type="text" name="title" id="title-np" class="form-control">
+            </div>
+            <div>
+                <label for="description" class="form-label">What would you like to say?</label>
+                <input type="text" name="description" id="description-np" class="form-control">
+            </div>
+            <div>
+                <button type="submit" id="newPostBtn" class="btn btn-outline-dark">Add New Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/js/dashboard.js"></script>
